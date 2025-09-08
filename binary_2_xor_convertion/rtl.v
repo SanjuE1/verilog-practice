@@ -13,7 +13,7 @@ endmodule
 
 
 // 
-module xor_conversion(in,out);
+module binary_conversion(in,out);
 		input [3:0]in;
 		output reg [3:0]out ;
 		integer i;
@@ -40,7 +40,7 @@ module tb;
 	wire [3:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
-	xor_conversion uut (
+	binary_conversion uut (
 		.in(in), 
 		.out(out)
 	);
