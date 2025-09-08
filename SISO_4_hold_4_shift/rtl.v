@@ -30,6 +30,41 @@ reg [2:0]count; reg [3:0]temp;
 				end
 				assign dout=temp[3];
 	endmodule
+
+
+
+
+// above one need some changes
+//alternative method and efficient method
+
+
+module SISO_( input clk,rst ,input din,  output dout );
+reg [1:0]count; reg [3:0]temp;
+
+		always@(posedge clk)				
+			begin
+			
+				if(rst)
+					begin
+						temp<=4'b0;
+						count<=2'b0;
+					end
+					
+				else if ( count<=2'd1)
+						begin
+						temp<={din,temp[3:1]};	
+							count<=count+1'b1;
+						end
+						
+				else 
+						begin
+							temp<=temp;
+							count<=count+1'd1;
+							
+				end
+				end
+				assign dout=temp[3];
+	endmodule
 //******************************TB*********************************//
 
 
