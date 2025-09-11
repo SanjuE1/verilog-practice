@@ -10,7 +10,7 @@ module patttern112233(input clk,rst,output reg [3:0]out);
 					end
       else if(temp==4'd10&&out==4'd10)  
 						begin
-						temp<=4'b1;
+						temp<=4'b0;
 						out<=4'b1;
 					end
 				else if(out==temp)
