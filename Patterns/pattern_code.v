@@ -1,3 +1,20 @@
+//1)triangle 12345
+
+module pyramid();
+	integer i,j;
+	 initial begin
+		for(i=1; i<=5; i=i+1)
+			begin
+				for(j=1;j<=i ;j=j+1)
+					begin
+						$write("",i);
+					end
+					$display();
+				end
+		end
+	endmodule
+
+	
 //yaml triangle 54321
 module pyramid();
 	integer i,j;
@@ -59,14 +76,33 @@ module pyramid();
 				for(j=1;j<=n ;j=j+1)
 					begin
 					if(i==1 || i==n || j==1 || j==n)
+						
 						$write("*");
 						else
-              $write(" ");
+						$write(" ");
+						
 					end
 					$display();
 				end
 		end
 	endmodule
+	
+// reverse upper triangle 54321	
+
+	module pyramid();
+	integer i,j;
+	 initial begin
+		for(i=1; i<=5; i=i+1)
+			begin
+				for(j=5;j>=i ;j=j-1)
+					begin
+						$write("",j);
+					end
+					$display();
+				end
+		end
+	endmodule
+
 	
 	 
 
